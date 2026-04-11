@@ -1,4 +1,4 @@
-<?php
+<?php // Pizza adatbazis kezelo modul ?>
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=pizza_db', 'root', '', 
                     array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
