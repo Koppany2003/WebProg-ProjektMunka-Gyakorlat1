@@ -13,7 +13,6 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo']) && isset($_POST['veze
             $ujra = "true";
         }
         else {
-
             $sqlInsert = "insert into felhasznalok(id, csaladi_nev, utonev, bejelentkezes, jelszo)
                           values(0, :csaladinev, :utonev, :bejelentkezes, :jelszo)";
             $stmt = $dbh->prepare($sqlInsert); 
