@@ -1,8 +1,7 @@
 <?php
 if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
     try {
-        $dbh = new PDO('mysql:host=localhost;dbname=pizza_db', 'root', '',
-                        array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+        $dbh = new PDO('mysql:host=localhost;dbname=dmebalzs', 'dmebalzs', '67Balazs82.', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
         
         $sqlSelect = "select id, csaladi_nev, utonev from felhasznalok where bejelentkezes = :bejelentkezes and jelszo = sha1(:jelszo)";
