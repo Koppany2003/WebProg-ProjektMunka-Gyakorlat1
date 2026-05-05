@@ -19,7 +19,7 @@ function ellenoriz() {
 }
 </script>
 
-<form action="kapcsolat_mentes" method="post" onsubmit="return ellenoriz();">
+<form action="?kapcsolat_mentes" method="post" onsubmit="return ellenoriz();">
     <label>Név (kötelező):</label><br>
     <input type="text" id="nev" name="nev"><br><br>
     

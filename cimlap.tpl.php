@@ -2,12 +2,20 @@
 
 <p>Kecskemét legjobb pizzái, egyenesen a kampusz mellől! Friss alapanyagok, gyors kiszállítás.</p>
 
-<h3>Így készül a nálunk a pizza:</h3>
+<h3>Így készül nálunk a pizza (YouTube videó):</h3>
 <div style="margin-bottom: 20px;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1-SJGQ2HLp8" 
         title="YouTube video player" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
+</div>
+
+<h3>Frissen szeletelve (Saját videó):</h3>
+<div style="margin-bottom: 20px;">
+    <video width="560" controls autoplay muted loop>
+      <source src="videos/pizza.mp4" type="video/mp4">
+      A böngésződ nem támogatja a videó lejátszását.
+    </video>
 </div>
 
 <hr>

@@ -1,11 +1,26 @@
 <h2>Beérkezett üzenetek</h2>
 <table>
-    <tr><th>Név</th><th>Üzenet</th><th>Időpont</th></tr>
+    <tr>
+        <th>Küldő neve</th>
+        <th>Üzenet</th>
+        <th>Időpont</th>
+    </tr>
     <?php
-    $dbh = new PDO('mysql:host=localhost;dbname=pizza_db', 'root', '');
-    $res = $dbh->query("SELECT * FROM uzenetek ORDER BY idopont DESC");
-    while($sor = $res->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr><td>".htmlspecialchars($sor['nev'])."</td><td>".htmlspecialchars($sor['szoveg'])."</td><td>".$sor['idopont']."</td></tr>";
+    try {
+        $dbh = new PDO('mysql:host=localhost;dbname=pizza_db', 'root', '');
+        $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
+        
+        $res = $dbh->query("SELECT * FROM uzenetek ORDER BY bekuldes_ideje DESC");
+        
+        while($sor = $res->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr>";
+            echo "<td>".htmlspecialchars($sor['kuldo_neve'])."</td>";
+            echo "<td>".htmlspecialchars($sor['uzenet_szovege'])."</td>";
+            echo "<td>".$sor['bekuldes_ideje']."</td>";
+            echo "</tr>";
+        }
+    } catch (PDOException $e) {
+        echo "<tr><td colspan='3'>Hiba: " . $e->getMessage() . "</td></tr>";
     }
     ?>
 </table>
